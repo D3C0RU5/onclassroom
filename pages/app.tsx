@@ -6,15 +6,15 @@ import { signIn, SignInResponse, signOut, useSession } from 'next-auth/client'
 import 'tailwindcss/tailwind.css'
 
 //const Home: React.FC = () => {
-const Home: NextPage = () => {
+const AppPage: NextPage = () => {
   const [session, loading] = useSession();
   
   return (
     <div>
       <Head>
         <title>Minha pagina</title>
-        <h1 className="p-1">Taynara meu amor</h1>
       </Head>
+        <h1 className="p-1">Bem vindo a página APP</h1>
       {!session && (
         <div className="text-3xl">
           Not signed in <br />
@@ -38,4 +38,4 @@ const Home: NextPage = () => {
   );
 }
 
-export default Home
+export default AppPage;
